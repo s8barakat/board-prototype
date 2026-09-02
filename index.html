@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Board prototype</title>
-    <script type="module" crossorigin src="./assets/index-CesV9Mnq.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DjB_Xq-d.css">
+    <script type="module" crossorigin src="./assets/index-LCQjwmCu.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-8yyA_9rG.css">
   </head>
   <body>
     <div id="app">
@@ -25,8 +25,18 @@
             <button id="btn-notice-revert" type="button">Revert to the running game's settings</button>
           </div>
           <div id="bonus-banner" class="banner" hidden></div>
+          <div id="bar-b" class="player-bar"></div>
           <div id="board" class="board" aria-label="chess board"></div>
+          <div id="bar-w" class="player-bar"></div>
           <div id="promo" class="promo" hidden></div>
+          <div class="nav">
+            <button id="nav-first" type="button" title="Start position (Home)">⏮</button>
+            <button id="nav-back" type="button" title="Back one step (←)">◀</button>
+            <button id="nav-fwd" type="button" title="Forward one step (→)">▶</button>
+            <button id="nav-live" type="button" title="Back to the game (End)">⏭</button>
+            <span id="nav-pos" class="nav-pos"></span>
+          </div>
+          <div id="frame-desc" class="frame-desc"></div>
           <div class="actions">
             <button id="btn-decline" hidden>Decline bonus</button>
             <button id="btn-resign">Resign</button>
@@ -35,6 +45,11 @@
           <div id="result" class="result" hidden></div>
         </section>
         <aside class="side-col">
+          <details open class="moves-panel">
+            <summary>Moves</summary>
+            <div id="moves" class="moves"></div>
+            <p class="hint">Click a move to see the position after it, then use ◀ ▶ to step through the capture and the bonus move separately.</p>
+          </details>
           <details open>
             <summary>Match setup</summary>
             <label class="row">Preset <select id="preset"></select></label>
@@ -46,11 +61,7 @@
             <button id="btn-apply" class="primary">Start a new game with these settings</button>
             <p class="hint">Settings apply to the next game. The current game keeps the rules it started with.</p>
           </details>
-          <details open>
-            <summary>Moves</summary>
-            <ol id="moves" class="moves"></ol>
-          </details>
-          <details open>
+          <details>
             <summary>Playtest data</summary>
             <p id="stats" class="hint"></p>
             <div class="actions">
