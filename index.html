@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Spoils — prototype</title>
+    <script type="module" crossorigin src="./assets/index-KK0Qa_DM.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BriBaR7w.css">
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Spoils <span class="tag">playtest prototype</span></h1>
+        <p class="rule">
+          Chess, plus one rule: <strong>when a piece captures, it immediately makes one more move using the movement pattern of the piece it just took.</strong>
+          A bishop that takes a rook makes one rook move. The capturing piece stays what it is.
+        </p>
+      </header>
+      <main>
+        <section class="board-col">
+          <div id="status" class="status"></div>
+          <div id="bonus-banner" class="banner" hidden></div>
+          <div id="board" class="board" aria-label="chess board"></div>
+          <div id="promo" class="promo" hidden></div>
+          <div class="actions">
+            <button id="btn-decline" hidden>Decline bonus</button>
+            <button id="btn-resign">Resign</button>
+            <button id="btn-new">New game</button>
+          </div>
+          <div id="result" class="result" hidden></div>
+        </section>
+        <aside class="side-col">
+          <details open>
+            <summary>Match setup</summary>
+            <label class="row">Preset <select id="preset"></select></label>
+            <div id="flags" class="flags"></div>
+            <div class="seats">
+              <label class="row">White <select id="seat-w"></select> <select id="exp-w"></select></label>
+              <label class="row">Black <select id="seat-b"></select> <select id="exp-b"></select></label>
+            </div>
+            <button id="btn-apply" class="primary">Start a new game with these settings</button>
+            <p class="hint">Settings apply to the next game. The current game keeps the rules it started with.</p>
+          </details>
+          <details open>
+            <summary>Moves</summary>
+            <ol id="moves" class="moves"></ol>
+          </details>
+          <details open>
+            <summary>Playtest data</summary>
+            <p id="stats" class="hint"></p>
+            <div class="actions">
+              <button id="btn-export">Export this game</button>
+              <button id="btn-export-all">Export all stored games</button>
+              <button id="btn-clear">Clear stored games</button>
+            </div>
+            <p class="hint">Every finished (or abandoned) game is stored in this browser. Please export all games and send the file back.</p>
+          </details>
+          <details>
+            <summary>Legend</summary>
+            <ul class="legend">
+              <li><span class="swatch dest"></span> legal move</li>
+              <li><span class="swatch dest-capture"></span> legal capture</li>
+              <li><span class="swatch bonus-dest"></span> bonus destination (borrowed pattern)</li>
+              <li><span class="swatch bonus-capture"></span> bonus capture (Mayhem only)</li>
+              <li><span class="swatch check"></span> king in check</li>
+              <li><span class="swatch warn-king"></span> king warning: a capture-and-reach combination can take the king here</li>
+              <li><span class="swatch warn-dest"></span> king move that would still be exposed</li>
+            </ul>
+            <p class="hint">Notation: <code>Bxe5&gt;Re8</code> = bishop takes on e5, then moves as a rook to e8. <code>&gt;-</code> = bonus declined. <code>#K</code> = king taken.</p>
+          </details>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>
