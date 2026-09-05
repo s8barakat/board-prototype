@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; worker-src 'self' blob:" />
+    <meta name="theme-color" content="#1f1d1a" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Spoils" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icons/icon-192.png" type="image/png" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <title>Spoils</title>
+    <script type="module" crossorigin src="./assets/index-BNmFPpD2.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DIMizpXp.css">
+  </head>
+  <body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <defs>
+        <symbol id="i-play" viewBox="0 0 24 24"><path d="M4 4h16v16H4z M8 8h4v4H8z M12 12h4v4h-4z M8 16h4v4H8z M12 4h4v4h-4z M16 8h4v4h-4z" fill="currentColor" opacity=".9"/></symbol>
+        <symbol id="i-puzzle" viewBox="0 0 24 24"><path d="M10 3a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v4h1a2 2 0 1 1 0 4h-1v4a2 2 0 0 1-2 2h-4v-1a2 2 0 1 0-4 0v1H4a2 2 0 0 1-2-2v-4h1a2 2 0 1 0 0-4H2V8a2 2 0 0 1 2-2h4V5a2 2 0 0 1 2-2z" fill="currentColor"/></symbol>
+        <symbol id="i-learn" viewBox="0 0 24 24"><path d="M12 3 1 8l11 5 9-4.1V17h2V8L12 3z M5 12.5V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-4.5l-7 3.2-7-3.2z" fill="currentColor"/></symbol>
+        <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4h7a2 2 0 0 1 2 2v14a1 1 0 0 0-1-1H4V4z m16 0h-7a2 2 0 0 0-2 2v14a1 1 0 0 1 1-1h8V4z" fill="currentColor"/></symbol>
+        <symbol id="i-replay" viewBox="0 0 24 24"><path d="M12 5V2L7 6l5 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7z" fill="currentColor"/></symbol>
+        <symbol id="i-settings" viewBox="0 0 24 24"><path d="M19.4 13a7.6 7.6 0 0 0 0-2l2-1.6-2-3.4-2.4 1a7.3 7.3 0 0 0-1.7-1L15 3.5H9l-.4 2.5a7.3 7.3 0 0 0-1.7 1l-2.4-1-2 3.4L4.6 11a7.6 7.6 0 0 0 0 2l-2 1.6 2 3.4 2.4-1a7.3 7.3 0 0 0 1.7 1l.4 2.5h6l.4-2.5a7.3 7.3 0 0 0 1.7-1l2.4 1 2-3.4-2.1-1.6zM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7z" fill="currentColor"/></symbol>
+        <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M7 3h10v2h3v3a4 4 0 0 1-4 4h-.3A5 5 0 0 1 13 15v2h3v3H8v-3h3v-2a5 5 0 0 1-2.7-3H8a4 4 0 0 1-4-4V5h3V3zm11 4h-1v3a2 2 0 0 0 1-2V7zM7 7H6v1a2 2 0 0 0 1 2V7z" fill="currentColor"/></symbol>
+        <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M7 2h2v2h6V2h2v2h3a1 1 0 0 1 1 1v15a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a1 1 0 0 1 1-1h3V2zm-2 8v10h14V10H5zm2 2h3v3H7v-3z" fill="currentColor"/></symbol>
+        <symbol id="i-sound" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4zm11.5 3a3.5 3.5 0 0 0-2-3.2v6.4a3.5 3.5 0 0 0 2-3.2zm-2-7.5v2.1a5.5 5.5 0 0 1 0 10.8v2.1a7.5 7.5 0 0 0 0-15z" fill="currentColor"/></symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 11h10.2l-4.6-4.6L12 5l7 7-7 7-1.4-1.4 4.6-4.6H5z" fill="currentColor"/></symbol>
+        <symbol id="i-first" viewBox="0 0 24 24"><path d="M6 5h2v14H6zm12 0v14l-9-7z" fill="currentColor"/></symbol>
+        <symbol id="i-prev" viewBox="0 0 24 24"><path d="M16 5v14l-9-7z" fill="currentColor"/></symbol>
+        <symbol id="i-next" viewBox="0 0 24 24"><path d="M8 5v14l9-7z" fill="currentColor"/></symbol>
+        <symbol id="i-last" viewBox="0 0 24 24"><path d="M16 5h2v14h-2zM6 5v14l9-7z" fill="currentColor"/></symbol>
+      </defs>
+    </svg>
+
+    <div id="app" class="shell">
+      <div id="live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+      <nav class="rail" aria-label="Main">
+        <div class="brand" title="Spoils">S</div>
+        <button id="nav-play" class="rail-btn active" type="button"><svg><use href="#i-play"/></svg><span>Play</span></button>
+        <button id="nav-puzzles" class="rail-btn" type="button"><svg><use href="#i-puzzle"/></svg><span>Puzzles</span></button>
+        <button id="nav-learn" class="rail-btn" type="button"><svg><use href="#i-learn"/></svg><span>Learn</span></button>
+        <button id="nav-rules" class="rail-btn" type="button"><svg><use href="#i-book"/></svg><span>Rules</span></button>
+        <button id="nav-replays" class="rail-btn" type="button"><svg><use href="#i-replay"/></svg><span>Replays</span></button>
+        <div class="rail-spacer"></div>
+        <button id="nav-settings" class="rail-btn" type="button"><svg><use href="#i-settings"/></svg><span>Settings</span></button>
+      </nav>
+
+      <main class="content">
+        <!-- Play -->
+        <section id="screen-menu" class="screen">
+          <div class="play-layout">
+            <div class="hero">
+              <div class="hero-eyebrow">Chess, plus one rule</div>
+              <h1>Capture a piece. <span class="accent">Borrow its move.</span></h1>
+              <p class="rule" data-str="rule.short"></p>
+              <p id="m-first" class="notice-first" hidden data-str="menu.firstLaunch"></p>
+              <div class="hero-actions">
+                <button id="m-start" class="btn primary xl" data-str="menu.play"></button>
+                <button id="m-resume" class="btn xl" hidden data-str="menu.resume"></button>
+              </div>
+              <p class="hint" id="m-stats"></p>
+              <div class="board-frame preview" aria-hidden="true"><canvas id="preview-board"></canvas></div>
+            </div>
+            <div class="setup card">
+              <div class="card-title">Match setup</div>
+              <div id="mode-cards" class="mode-cards" role="radiogroup" aria-label="Mode"></div>
+              <div id="advanced" class="advanced" hidden>
+                <div class="advanced-head">
+                  <strong>Custom rules — unranked.</strong> Every contested rule as a switch. Games are logged as custom.
+                  <button id="adv-reset-mayhem" type="button" class="btn sm">Reset to Mayhem</button>
+                  <button id="adv-reset-classic" type="button" class="btn sm">Reset to Classic</button>
+                </div>
+                <div id="flags" class="flags"></div>
+              </div>
+              <div class="menu-grid">
+                <label><span data-str="menu.opponent"></span>
+                  <select id="m-opponent">
+                    <option value="medium">Computer — Medium</option>
+                    <option value="easy">Computer — Easy</option>
+                    <option value="hard">Computer — Hard</option>
+                    <option value="human">A friend (hot seat)</option>
+                  </select>
+                </label>
+                <label><span data-str="menu.colour"></span>
+                  <select id="m-colour">
+                    <option value="w">White</option>
+                    <option value="b">Black</option>
+                    <option value="random">Random</option>
+                  </select>
+                </label>
+              </div>
+              <div class="quick">
+                <button id="m-puzzles" class="quick-btn" type="button"><svg><use href="#i-puzzle"/></svg><span data-str="menu.puzzles"></span></button>
+                <button id="m-tutorial" class="quick-btn" type="button"><svg><use href="#i-learn"/></svg><span data-str="menu.tutorial"></span></button>
+                <button id="m-rules" class="quick-btn" type="button"><svg><use href="#i-book"/></svg><span data-str="menu.rules"></span></button>
+                <button id="m-replays" class="quick-btn" type="button"><svg><use href="#i-replay"/></svg><span data-str="menu.replays"></span></button>
+              </div>
+              <div class="menu-actions secondary">
+                <button id="m-settings" class="btn sm" data-str="menu.settings"></button>
+                <button id="m-export" class="btn sm" data-str="menu.export"></button>
+              </div>
+              <p class="hint" data-str="menu.controls"></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Board screen: matches, puzzles, tutorial, replays -->
+        <section id="screen-game" class="screen" hidden>
+          <div class="game-layout">
+            <div class="board-col">
+              <div id="bar-top" class="player-bar"></div>
+              <div class="board-wrap">
+                <div class="board-frame"><canvas id="board" aria-label="board" tabindex="0"></canvas></div>
+              </div>
+              <div id="bar-bottom" class="player-bar"></div>
+            </div>
+            <aside class="side-col">
+              <div class="card status-card">
+                <div id="status" class="status"></div>
+                <div id="banner" class="banner" hidden></div>
+                <div id="task" class="task" hidden>
+                  <div id="task-title" class="task-title"></div>
+                  <div id="task-text"></div>
+                  <div id="task-feedback" class="task-feedback"></div>
+                  <div class="actions">
+                    <button id="t-retry" class="btn sm" hidden data-str="action.retry"></button>
+                    <button id="t-solution" class="btn sm" hidden data-str="action.showSolution"></button>
+                    <button id="t-next" class="btn primary sm" hidden data-str="action.next"></button>
+                    <button id="t-skip" class="btn sm ghost" hidden data-str="action.skip"></button>
+                  </div>
+                </div>
+                <div id="desc" class="desc"></div>
+              </div>
+              <div class="card moves-card">
+                <div class="card-title row-between"><span data-str="moves.title"></span><span id="nav-pos" class="nav-pos"></span></div>
+                <div id="moves" class="moves"></div>
+                <div id="moves-empty" class="moves-empty" data-str="moves.empty"></div>
+                <div id="nav" class="nav" hidden>
+                  <button id="nav-first" class="btn icon" type="button" title="Start (Home)" aria-label="Start"><svg><use href="#i-first"/></svg></button>
+                  <button id="nav-back" class="btn icon" type="button" title="Back (←)" aria-label="Back"><svg><use href="#i-prev"/></svg></button>
+                  <button id="nav-fwd" class="btn icon" type="button" title="Forward (→)" aria-label="Forward"><svg><use href="#i-next"/></svg></button>
+                  <button id="nav-last" class="btn icon" type="button" title="End (End)" aria-label="End"><svg><use href="#i-last"/></svg></button>
+                </div>
+              </div>
+              <div class="actions game-actions">
+                <button id="g-decline" class="btn sm" hidden data-str="action.decline"></button>
+                <button id="g-hint" class="btn sm" hidden data-str="action.hint"></button>
+                <button id="g-resign" class="btn sm ghost" data-str="action.resign"></button>
+                <button id="g-menu" class="btn sm ghost" data-str="action.menu"></button>
+              </div>
+              <details class="card legend-card">
+                <summary>What the marks mean</summary>
+                <ul class="legend">
+                  <li><span class="sw dot"></span> legal move</li>
+                  <li><span class="sw ring"></span> legal capture</li>
+                  <li><span class="sw diamond"></span> bonus destination, moving as the piece you took</li>
+                  <li><span class="sw dashed"></span> bonus capture (Mayhem)</li>
+                  <li><span class="sw hatch"></span> king warning (custom rulesets where a bonus may take the king)</li>
+                </ul>
+              </details>
+            </aside>
+          </div>
+          <div id="promo" class="modal" hidden>
+            <div class="modal-card">
+              <div class="modal-title" data-str="promo.title"></div>
+              <div id="promo-choices" class="promo-choices"></div>
+              <p class="hint" data-str="promo.hint"></p>
+            </div>
+          </div>
+          <div id="results" class="modal" hidden>
+            <div class="modal-card results-card">
+              <div id="results-figure" class="results-figure"></div>
+              <div id="results-title" class="modal-title"></div>
+              <p id="results-text"></p>
+              <div class="modal-actions">
+                <button id="r-rematch" class="btn primary" data-str="action.rematch"></button>
+                <button id="r-swap" class="btn" data-str="action.rematchSwap"></button>
+                <button id="r-menu" class="btn ghost" data-str="action.menu"></button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Puzzles hub -->
+        <section id="screen-puzzles" class="screen" hidden>
+          <div class="page wide">
+            <header class="page-head">
+              <div>
+                <h2 data-str="puzzle.title"></h2>
+                <p class="lead" data-str="puzzle.intro"></p>
+              </div>
+              <div id="p-pool" class="segmented" role="radiogroup" aria-label="Pool"></div>
+            </header>
+            <div class="stats">
+              <div class="stat-tile">
+                <div class="stat-label" data-str="puzzle.solvedLabel"></div>
+                <div id="p-solved" class="stat-value"></div>
+                <div class="progress"><div id="p-bar" class="progress-fill"></div></div>
+              </div>
+              <div class="stat-tile">
+                <div class="stat-label" data-str="puzzle.ratingLabel"></div>
+                <div id="p-rating" class="stat-value"></div>
+                <div id="p-rating-note" class="stat-note"></div>
+              </div>
+              <div class="stat-tile">
+                <div class="stat-label" data-str="puzzle.streakLabel"></div>
+                <div id="p-streak" class="stat-value"></div>
+                <div id="p-streak-note" class="stat-note"></div>
+              </div>
+            </div>
+            <div class="puzzle-cards">
+              <button id="p-continue" class="feature-card" type="button">
+                <div class="feature-icon"><svg><use href="#i-puzzle"/></svg></div>
+                <div class="feature-body">
+                  <div class="feature-title" data-str="puzzle.sequence"></div>
+                  <div id="p-next" class="feature-text"></div>
+                </div>
+                <svg class="feature-arrow"><use href="#i-arrow"/></svg>
+              </button>
+              <button id="p-daily" class="feature-card" type="button">
+                <div class="feature-icon daily"><svg><use href="#i-calendar"/></svg></div>
+                <div class="feature-body">
+                  <div class="feature-title" data-str="puzzle.daily"></div>
+                  <div id="p-daily-text" class="feature-text"></div>
+                </div>
+                <svg class="feature-arrow"><use href="#i-arrow"/></svg>
+              </button>
+            </div>
+            <p id="p-progress" class="hint" hidden></p>
+            <div class="menu-actions"><button id="p-back" class="btn ghost" data-str="action.back"></button></div>
+          </div>
+        </section>
+
+        <!-- Rules -->
+        <section id="screen-rules" class="screen" hidden>
+          <div class="page wide">
+            <header class="page-head">
+              <div>
+                <h2 data-str="rules.title"></h2>
+                <p class="lead" data-str="rules.lead"></p>
+              </div>
+            </header>
+            <div class="rules-layout">
+              <article class="rules-text">
+                <section class="rules-section">
+                  <h3 data-str="rules.h1"></h3>
+                  <p data-str="rules.body1"></p>
+                </section>
+                <section class="rules-section">
+                  <h3 data-str="rules.h2"></h3>
+                  <p data-str="rules.body2"></p>
+                </section>
+                <section class="rules-section">
+                  <h3 data-str="rules.h3"></h3>
+                  <div class="mode-rows">
+                    <div class="mode-row"><span class="mode mayhem">Mayhem</span><p data-str="rules.body3"></p></div>
+                    <div class="mode-row"><span class="mode classic">Classic</span><p data-str="rules.body4"></p></div>
+                  </div>
+                </section>
+                <section class="rules-section">
+                  <h3 data-str="rules.h4"></h3>
+                  <ul class="legend two-col">
+                    <li><span class="sw dot"></span> legal move</li>
+                    <li><span class="sw ring"></span> legal capture</li>
+                    <li><span class="sw diamond"></span> bonus destination</li>
+                    <li><span class="sw dashed"></span> bonus capture (Mayhem)</li>
+                  </ul>
+                </section>
+                <div class="menu-actions">
+                  <button id="rules-tutorial" class="btn primary" data-str="rules.tryIt"></button>
+                  <button id="rules-back" class="btn ghost" data-str="action.back"></button>
+                </div>
+              </article>
+              <aside class="card demo-wrap">
+                <div class="card-title" data-str="rules.demoTitle"></div>
+                <div class="board-frame small"><canvas id="demo-board" aria-label="demonstration" class="demo-board"></canvas></div>
+                <p class="demo-caption" data-str="rules.demo"></p>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <!-- Replays -->
+        <section id="screen-replays" class="screen" hidden>
+          <div class="page wide">
+            <header class="page-head">
+              <div>
+                <h2 data-str="replays.title"></h2>
+                <p class="lead" data-str="replays.lead"></p>
+              </div>
+              <button id="replays-back" class="btn ghost" data-str="action.back"></button>
+            </header>
+            <div id="replay-empty" class="empty-state" hidden>
+              <svg><use href="#i-replay"/></svg>
+              <p data-str="replays.empty"></p>
+              <button id="replays-play" class="btn primary" data-str="replays.play"></button>
+            </div>
+            <div id="replay-list" class="replay-list"></div>
+          </div>
+        </section>
+
+        <!-- Settings -->
+        <section id="screen-settings" class="screen" hidden>
+          <div class="page wide">
+            <header class="page-head">
+              <div>
+                <h2 data-str="settings.title"></h2>
+                <p class="lead" data-str="settings.lead"></p>
+              </div>
+              <button id="s-back" class="btn ghost" data-str="action.back"></button>
+            </header>
+            <div class="settings-grid">
+              <section class="card settings-section">
+                <div class="card-title" data-str="settings.appearance"></div>
+                <div class="setting">
+                  <div class="setting-label"><span data-str="settings.board"></span><span class="setting-help" data-str="settings.boardHelp"></span></div>
+                  <div id="s-board" class="swatches" role="radiogroup" aria-label="Board colours"></div>
+                </div>
+                <div class="setting">
+                  <div class="setting-label"><span data-str="settings.theme"></span><span class="setting-help" data-str="settings.themeHelp"></span></div>
+                  <select id="s-theme">
+                    <option value="ledger">Ledger (original set)</option>
+                    <option value="greybox">Greybox (placeholder glyphs)</option>
+                  </select>
+                </div>
+                <div class="setting">
+                  <div class="setting-label"><span data-str="settings.uiScale"></span><span class="setting-help" data-str="settings.uiScaleHelp"></span></div>
+                  <div id="s-scale" class="segmented" role="radiogroup" aria-label="Interface size"></div>
+                </div>
+              </section>
+              <section class="card settings-section">
+                <div class="card-title" data-str="settings.motionSound"></div>
+                <div class="setting">
+                  <div class="setting-label"><span data-str="settings.animation"></span><span class="setting-help" data-str="settings.animationHelp"></span></div>
+                  <div id="s-anim" class="segmented" role="radiogroup" aria-label="Animation"></div>
+                </div>
+                <div class="setting">
+                  <div class="setting-label"><span data-str="settings.sound"></span><span class="setting-help" data-str="settings.soundHelp"></span></div>
+                  <div class="volume-row">
+                    <svg class="volume-icon"><use href="#i-sound"/></svg>
+                    <input id="s-volume" type="range" min="0" max="100" step="5" aria-label="Sound volume" />
+                    <span id="s-volume-value" class="volume-value"></span>
+                    <button id="s-test" class="btn sm" type="button" data-str="settings.testSound"></button>
+                  </div>
+                </div>
+              </section>
+              <section class="card settings-section controls">
+                <div class="card-title" data-str="settings.controls"></div>
+                <div class="bindings-grid">
+                  <div>
+                    <div class="bindings-head" data-str="settings.keys"></div>
+                    <div id="s-keys" class="bindings"></div>
+                  </div>
+                  <div>
+                    <div class="bindings-head" data-str="settings.pad"></div>
+                    <div id="s-buttons" class="bindings"></div>
+                  </div>
+                </div>
+                <div class="menu-actions">
+                  <button id="s-reset" class="btn ghost" data-str="settings.reset"></button>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

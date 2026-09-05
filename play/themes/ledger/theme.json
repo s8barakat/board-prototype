@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "ledger",
+  "name": "Ledger",
+  "version": 3,
+  "provenance": {
+    "author": "Spoils project",
+    "created": "2026-09-03",
+    "licence": "Proprietary, owned by the project owner",
+    "generated_by": "Authored in-repo; SVGs emitted by packages/game/scripts/make-ledger.ts (v3: the Staunton set chosen from the showroom, with shading)",
+    "ai_assisted": true
+  },
+  "board": { "light": "#dfe6ee", "dark": "#6e91b8", "border": "#1b1a17", "coordinates": "rgba(0,0,0,0.5)" },
+  "palettes": {
+    "blue": { "light": "#dfe6ee", "dark": "#6e91b8", "border": "#1b1a17", "coordinates": "rgba(0,0,0,0.5)" },
+    "green": { "light": "#e9e5cf", "dark": "#6f9a58", "border": "#1b1a17", "coordinates": "rgba(0,0,0,0.5)" },
+    "walnut": { "light": "#ecdcc2", "dark": "#a67c5b", "border": "#1b1a17", "coordinates": "rgba(0,0,0,0.5)" },
+    "slate": { "light": "#dfe3ea", "dark": "#6b7f99", "border": "#1b1a17", "coordinates": "rgba(0,0,0,0.5)" }
+  },
+  "marks": {
+    "selection": "rgba(255, 213, 0, 0.45)",
+    "dest": "rgba(0,0,0,0.16)",
+    "capture": "rgba(0,0,0,0.16)",
+    "bonus": "#f5a623",
+    "bonusInk": "#1f1400",
+    "check": "#e8453c",
+    "warning": "#e0245e",
+    "cursor": "#ffffff",
+    "last": "rgba(255, 213, 0, 0.42)",
+    "trail": "rgba(255, 213, 0, 0.18)"
+  },
+  "pieces": {
+    "kind": "sprite",
+    "scale": 0.98,
+    "files": {
+      "wK": "svg/wK.svg", "wQ": "svg/wQ.svg", "wR": "svg/wR.svg", "wB": "svg/wB.svg", "wN": "svg/wN.svg", "wP": "svg/wP.svg",
+      "bK": "svg/bK.svg", "bQ": "svg/bQ.svg", "bR": "svg/bR.svg", "bB": "svg/bB.svg", "bN": "svg/bN.svg", "bP": "svg/bP.svg"
+    }
+  },
+  "animation": {
+    "move": { "ms": 220 },
+    "kill": { "ms": 160 },
+    "bonus": {
+      "N": { "ms": 460, "style": "hop" },
+      "R": { "ms": 380, "style": "slide" },
+      "B": { "ms": 400, "style": "glide" },
+      "Q": { "ms": 440, "style": "flourish" },
+      "P": { "ms": 360, "style": "step" }
+    },
+    "pulse": { "selectionMs": 2000, "checkMs": 1200 }
+  }
+}

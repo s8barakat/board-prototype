@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "id": "greybox",
+  "name": "Greybox",
+  "version": 1,
+  "provenance": {
+    "author": "Spoils project",
+    "created": "2026-09-03",
+    "licence": "Proprietary, owned by the project owner",
+    "generated_by": "Placeholder theme using the renderer's text glyphs; no sprite files",
+    "ai_assisted": true
+  },
+  "board": {
+    "light": "#ecdcc2",
+    "dark": "#a67c5b",
+    "border": "#111111",
+    "coordinates": "rgba(0,0,0,0.55)"
+  },
+  "marks": {
+    "selection": "#2f8fff",
+    "dest": "rgba(0,0,0,0.38)",
+    "capture": "rgba(0,0,0,0.45)",
+    "bonus": "#ff9a1f",
+    "bonusInk": "#1a1200",
+    "check": "#ff3b3b",
+    "warning": "#e0245e",
+    "cursor": "#ffffff",
+    "last": "rgba(255,235,59,0.35)",
+    "trail": "rgba(255,235,59,0.16)"
+  },
+  "pieces": {
+    "kind": "glyph"
+  },
+  "animation": {
+    "move": {
+      "ms": 260
+    },
+    "kill": {
+      "ms": 160
+    },
+    "bonus": {
+      "N": {
+        "ms": 420,
+        "style": "hop"
+      },
+      "R": {
+        "ms": 380,
+        "style": "slide"
+      },
+      "B": {
+        "ms": 400,
+        "style": "glide"
+      },
+      "Q": {
+        "ms": 440,
+        "style": "flourish"
+      },
+      "P": {
+        "ms": 360,
+        "style": "step"
+      }
+    },
+    "pulse": {
+      "selectionMs": 2000,
+      "checkMs": 1200
+    }
+  },
+  "palettes": {
+    "walnut": {
+      "light": "#ecdcc2",
+      "dark": "#a67c5b",
+      "border": "#111111",
+      "coordinates": "rgba(0,0,0,0.55)"
+    }
+  }
+}
