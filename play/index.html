@@ -13,8 +13,8 @@
     <link rel="icon" href="./icons/icon-192.png" type="image/png" />
     <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
     <title>Spoils</title>
-    <script type="module" crossorigin src="./assets/index-DfL8wwwe.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DvjVh1IT.css">
+    <script type="module" crossorigin src="./assets/index-BtvkfrJT.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CEhYBiGS.css">
   </head>
   <body>
     <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -123,7 +123,12 @@
               <div id="eval-bar" class="eval-bar" hidden aria-label="evaluation"><div id="eval-fill" class="eval-fill"></div></div>
               <div id="bar-top" class="player-bar"></div>
               <div class="board-wrap">
-                <div class="board-frame"><canvas id="board" aria-label="board" tabindex="0"></canvas></div>
+                <div class="board-frame"><canvas id="board" aria-label="board" tabindex="0"></canvas>
+                  <div id="drag-hint" class="drag-hint" hidden aria-hidden="true">
+                    <span class="drag-finger"></span>
+                    <span class="drag-label" data-str="hint.drag"></span>
+                  </div>
+                </div>
               </div>
               <div id="bar-bottom" class="player-bar"></div>
             </div>
@@ -372,7 +377,7 @@
               <section class="card settings-section">
                 <div class="card-title" data-str="settings.motionSound"></div>
                 <div class="setting">
-                  <div class="setting-label"><span data-str="settings.animation"></span><span class="setting-help" data-str="settings.animationHelp"></span></div>
+                  <div class="setting-label"><span data-str="settings.animation"></span><span class="setting-help" data-str="settings.animationHelp"></span><span id="s-anim-system" class="setting-note" hidden data-str="settings.animationSystem"></span></div>
                   <div id="s-anim" class="segmented" role="radiogroup" aria-label="Animation"></div>
                 </div>
                 <div class="setting">
