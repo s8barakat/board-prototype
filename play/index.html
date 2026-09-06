@@ -13,8 +13,8 @@
     <link rel="icon" href="./icons/icon-192.png" type="image/png" />
     <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
     <title>Spoils</title>
-    <script type="module" crossorigin src="./assets/index-BNmFPpD2.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DIMizpXp.css">
+    <script type="module" crossorigin src="./assets/index-DBDKdP0G.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-B3_TwyJO.css">
   </head>
   <body>
     <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -136,25 +136,28 @@
                 </div>
                 <div id="desc" class="desc"></div>
               </div>
-              <div class="card moves-card">
+              <div id="moves-card" class="card moves-card sheet">
                 <div class="card-title row-between"><span data-str="moves.title"></span><span id="nav-pos" class="nav-pos"></span></div>
                 <div id="moves" class="moves"></div>
                 <div id="moves-empty" class="moves-empty" data-str="moves.empty"></div>
-                <div id="nav" class="nav" hidden>
+              </div>
+              <div id="nav" class="nav" hidden>
                   <button id="nav-first" class="btn icon" type="button" title="Start (Home)" aria-label="Start"><svg><use href="#i-first"/></svg></button>
                   <button id="nav-back" class="btn icon" type="button" title="Back (←)" aria-label="Back"><svg><use href="#i-prev"/></svg></button>
                   <button id="nav-fwd" class="btn icon" type="button" title="Forward (→)" aria-label="Forward"><svg><use href="#i-next"/></svg></button>
                   <button id="nav-last" class="btn icon" type="button" title="End (End)" aria-label="End"><svg><use href="#i-last"/></svg></button>
-                </div>
               </div>
               <div class="actions game-actions">
-                <button id="g-decline" class="btn sm" hidden data-str="action.decline"></button>
+                <button id="g-decline" class="btn sm" hidden title="D" data-str="action.decline"></button>
                 <button id="g-hint" class="btn sm" hidden data-str="action.hint"></button>
+                <button id="g-moves" class="btn sm ghost mobile-only" type="button" data-str="action.moves"></button>
+                <button id="g-marks" class="btn sm ghost mobile-only" type="button" data-str="action.marks"></button>
                 <button id="g-resign" class="btn sm ghost" data-str="action.resign"></button>
-                <button id="g-menu" class="btn sm ghost" data-str="action.menu"></button>
+                <button id="g-menu" class="btn sm ghost" title="M" data-str="action.menu"></button>
               </div>
-              <details class="card legend-card">
-                <summary>What the marks mean</summary>
+              <div id="sheet-backdrop" class="sheet-backdrop" hidden></div>
+              <details id="legend-card" class="card legend-card sheet">
+                <summary data-str="legend.title"></summary>
                 <ul class="legend">
                   <li><span class="sw dot"></span> legal move</li>
                   <li><span class="sw ring"></span> legal capture</li>
