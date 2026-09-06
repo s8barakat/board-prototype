@@ -2,12 +2,12 @@
   "schema_version": 1,
   "id": "ledger",
   "name": "Ledger",
-  "version": 3,
+  "version": 4,
   "provenance": {
     "author": "Spoils project",
     "created": "2026-09-03",
     "licence": "Proprietary, owned by the project owner",
-    "generated_by": "Authored in-repo; SVGs emitted by packages/game/scripts/make-ledger.ts (v3: the Staunton set chosen from the showroom, with shading)",
+    "generated_by": "Authored in-repo; SVGs emitted by packages/game/scripts/make-ledger.ts (v3: the Staunton set chosen from the showroom, with shading; v4: knight redrawn, shatter kill beat)",
     "ai_assisted": true
   },
   "board": { "light": "#dfe6ee", "dark": "#6e91b8", "border": "#1b1a17", "coordinates": "rgba(0,0,0,0.5)" },
@@ -39,7 +39,7 @@
   },
   "animation": {
     "move": { "ms": 220 },
-    "kill": { "ms": 160 },
+    "kill": { "ms": 420 },
     "bonus": {
       "N": { "ms": 460, "style": "hop" },
       "R": { "ms": 380, "style": "slide" },
