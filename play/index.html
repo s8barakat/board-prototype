@@ -13,8 +13,8 @@
     <link rel="icon" href="./icons/icon-192.png" type="image/png" />
     <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
     <title>Spoils</title>
-    <script type="module" crossorigin src="./assets/index-BqSGIpiS.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-qbEI1z5c.css">
+    <script type="module" crossorigin src="./assets/index-1WEiLHNR.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BeOr7zm1.css">
   </head>
   <body>
     <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -117,8 +117,8 @@
               </div>
               <div id="bar-bottom" class="player-bar"></div>
             </div>
-            <aside class="side-col">
-              <div class="side-scroll">
+            <aside class="side-col" data-panel="moves">
+              <div class="side-panel">
               <div class="card status-card">
                 <div id="status" class="status"></div>
                 <div id="banner" class="banner" hidden></div>
@@ -160,6 +160,8 @@
               <div class="actions game-actions">
                 <button id="g-decline" class="btn sm" hidden title="D" data-str="action.decline"></button>
                 <button id="g-hint" class="btn sm" hidden data-str="action.hint"></button>
+                <button id="g-moves" class="btn sm ghost mobile-only tab" type="button" aria-pressed="true" data-str="action.moves"></button>
+                <button id="g-marks" class="btn sm ghost mobile-only tab" type="button" aria-pressed="false" data-str="action.marks"></button>
                 <button id="g-resign" class="btn sm ghost" data-str="action.resign"></button>
                 <button id="g-exit" class="btn sm ghost mobile-only" type="button" hidden data-str="action.exit"></button>
               </div>
