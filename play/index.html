@@ -13,8 +13,8 @@
     <link rel="icon" href="./icons/icon-192.png" type="image/png" />
     <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
     <title>Spoils</title>
-    <script type="module" crossorigin src="./assets/index-186B0j_w.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DAd82kOz.css">
+    <script type="module" crossorigin src="./assets/index-BqSGIpiS.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-qbEI1z5c.css">
   </head>
   <body>
     <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -51,24 +51,22 @@
       </nav>
 
       <main class="content">
-        <!-- Play -->
+        <!-- Play: the app home screen -->
         <section id="screen-menu" class="screen">
-          <div class="play-layout">
-            <div class="hero">
+          <div class="home">
+            <header class="home-head">
+              <div class="home-brand"><span class="brand-mark">S</span><span class="brand-name">Spoils</span></div>
+              <div id="m-stats" class="home-chip"></div>
+            </header>
+            <div class="hero-card">
               <div class="hero-eyebrow">Chess, plus one rule</div>
               <h1>Capture a piece. <span class="accent">Borrow its move.</span></h1>
-              <p class="rule" data-str="rule.short"></p>
-              <p id="m-first" class="notice-first" hidden data-str="menu.firstLaunch"></p>
-              <div class="hero-actions">
-                <button id="m-start" class="btn primary xl" data-str="menu.play"></button>
-                <button id="m-resume" class="btn xl" hidden data-str="menu.resume"></button>
-              </div>
-              <p class="hint" id="m-stats"></p>
               <div class="board-frame preview" aria-hidden="true"><canvas id="preview-board"></canvas></div>
             </div>
-            <div class="setup card">
-              <div class="card-title">Match setup</div>
-              <div id="mode-cards" class="mode-cards" role="radiogroup" aria-label="Mode"></div>
+            <p id="m-first" class="notice-first" hidden data-str="menu.firstLaunch"></p>
+            <div class="card play-card">
+              <div id="mode-cards" class="segmented mode-seg" role="radiogroup" aria-label="Mode"></div>
+              <p id="mode-blurb" class="mode-blurb"></p>
               <div id="advanced" class="advanced" hidden>
                 <div class="advanced-head">
                   <strong>Custom rules — unranked.</strong> Every contested rule as a switch. Games are logged as custom.
@@ -94,18 +92,18 @@
                   </select>
                 </label>
               </div>
-              <div class="quick">
-                <button id="m-puzzles" class="quick-btn" type="button"><svg><use href="#i-puzzle"/></svg><span data-str="menu.puzzles"></span></button>
-                <button id="m-tutorial" class="quick-btn" type="button"><svg><use href="#i-learn"/></svg><span data-str="menu.tutorial"></span></button>
-                <button id="m-rules" class="quick-btn" type="button"><svg><use href="#i-book"/></svg><span data-str="menu.rules"></span></button>
-                <button id="m-replays" class="quick-btn" type="button"><svg><use href="#i-replay"/></svg><span data-str="menu.replays"></span></button>
+              <div class="hero-actions">
+                <button id="m-resume" class="btn xl" hidden data-str="menu.resume"></button>
+                <button id="m-start" class="btn primary xl" data-str="menu.play"></button>
               </div>
-              <div class="menu-actions secondary">
-                <button id="m-settings" class="btn sm" data-str="menu.settings"></button>
-                <button id="m-export" class="btn sm" data-str="menu.export"></button>
-              </div>
-              <p class="hint" data-str="menu.controls"></p>
             </div>
+            <div class="quick">
+              <button id="m-puzzles" class="quick-btn" type="button"><svg><use href="#i-puzzle"/></svg><span data-str="menu.puzzles"></span><span id="q-puzzles" class="q-sub"></span></button>
+              <button id="m-tutorial" class="quick-btn" type="button"><svg><use href="#i-learn"/></svg><span data-str="menu.tutorial"></span><span id="q-tutorial" class="q-sub"></span></button>
+              <button id="m-rules" class="quick-btn" type="button"><svg><use href="#i-book"/></svg><span data-str="menu.rules"></span><span class="q-sub" data-str="menu.quick.rulesSub"></span></button>
+              <button id="m-replays" class="quick-btn" type="button"><svg><use href="#i-replay"/></svg><span data-str="menu.replays"></span><span id="q-replays" class="q-sub"></span></button>
+            </div>
+            <p class="home-foot"><button id="m-export" class="btn link" type="button" data-str="menu.export"></button></p>
           </div>
         </section>
 
@@ -120,6 +118,7 @@
               <div id="bar-bottom" class="player-bar"></div>
             </div>
             <aside class="side-col">
+              <div class="side-scroll">
               <div class="card status-card">
                 <div id="status" class="status"></div>
                 <div id="banner" class="banner" hidden></div>
@@ -136,10 +135,21 @@
                 </div>
                 <div id="desc" class="desc"></div>
               </div>
-              <div id="moves-card" class="card moves-card sheet">
+              <div id="moves-card" class="card moves-card">
                 <div class="card-title row-between"><span data-str="moves.title"></span><span id="nav-pos" class="nav-pos"></span></div>
                 <div id="moves" class="moves"></div>
                 <div id="moves-empty" class="moves-empty" data-str="moves.empty"></div>
+              </div>
+              <details id="legend-card" class="card legend-card">
+                <summary data-str="legend.title"></summary>
+                <ul class="legend">
+                  <li><span class="sw dot"></span> legal move</li>
+                  <li><span class="sw ring"></span> legal capture</li>
+                  <li><span class="sw diamond"></span> bonus destination, moving as the piece you took</li>
+                  <li><span class="sw dashed"></span> bonus capture (Mayhem)</li>
+                  <li><span class="sw hatch"></span> king warning (custom rulesets where a bonus may take the king)</li>
+                </ul>
+              </details>
               </div>
               <div id="nav" class="nav" hidden>
                   <button id="nav-first" class="btn icon" type="button" title="Start (Home)" aria-label="Start"><svg><use href="#i-first"/></svg></button>
@@ -150,22 +160,9 @@
               <div class="actions game-actions">
                 <button id="g-decline" class="btn sm" hidden title="D" data-str="action.decline"></button>
                 <button id="g-hint" class="btn sm" hidden data-str="action.hint"></button>
-                <button id="g-moves" class="btn sm ghost mobile-only" type="button" data-str="action.moves"></button>
-                <button id="g-marks" class="btn sm ghost mobile-only" type="button" data-str="action.marks"></button>
                 <button id="g-resign" class="btn sm ghost" data-str="action.resign"></button>
                 <button id="g-exit" class="btn sm ghost mobile-only" type="button" hidden data-str="action.exit"></button>
               </div>
-              <div id="sheet-backdrop" class="sheet-backdrop" hidden></div>
-              <details id="legend-card" class="card legend-card sheet">
-                <summary data-str="legend.title"></summary>
-                <ul class="legend">
-                  <li><span class="sw dot"></span> legal move</li>
-                  <li><span class="sw ring"></span> legal capture</li>
-                  <li><span class="sw diamond"></span> bonus destination, moving as the piece you took</li>
-                  <li><span class="sw dashed"></span> bonus capture (Mayhem)</li>
-                  <li><span class="sw hatch"></span> king warning (custom rulesets where a bonus may take the king)</li>
-                </ul>
-              </details>
             </aside>
           </div>
           <div id="promo" class="modal" hidden>
@@ -173,6 +170,15 @@
               <div class="modal-title" data-str="promo.title"></div>
               <div id="promo-choices" class="promo-choices"></div>
               <p class="hint" data-str="promo.hint"></p>
+            </div>
+          </div>
+          <div id="confirm" class="modal" hidden>
+            <div class="modal-card confirm-card">
+              <div id="confirm-text" class="confirm-text"></div>
+              <div class="modal-actions">
+                <button id="c-yes" class="btn primary danger" type="button" data-str="action.resign"></button>
+                <button id="c-no" class="btn ghost" type="button" data-str="confirm.keepPlaying"></button>
+              </div>
             </div>
           </div>
           <div id="results" class="modal" hidden>
