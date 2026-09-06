@@ -13,8 +13,8 @@
     <link rel="icon" href="./icons/icon-192.png" type="image/png" />
     <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
     <title>Spoils</title>
-    <script type="module" crossorigin src="./assets/index-BHVrTIAa.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CkJEcmTV.css">
+    <script type="module" crossorigin src="./assets/index-DfL8wwwe.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DvjVh1IT.css">
   </head>
   <body>
     <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -56,7 +56,7 @@
           <div class="home">
             <header class="home-head">
               <div class="home-brand"><span class="brand-mark">S</span><span class="brand-name">Spoils</span></div>
-              <div class="home-level"><div id="m-stats" class="home-chip"></div><div class="level-meter"><div id="m-level-bar" class="level-fill"></div></div></div>
+              <div class="home-level"><div class="home-chips"><div id="m-streak" class="home-chip streak" hidden></div><div id="m-stats" class="home-chip"></div></div><div class="level-meter"><div id="m-level-bar" class="level-fill"></div></div></div>
             </header>
             <div class="hero-card">
               <div class="hero-eyebrow">Chess, plus one rule</div>
@@ -106,6 +106,11 @@
               <button id="m-tutorial" class="quick-btn" type="button"><svg><use href="#i-learn"/></svg><span data-str="menu.tutorial"></span><span id="q-tutorial" class="q-sub"></span></button>
               <button id="m-rules" class="quick-btn" type="button"><svg><use href="#i-book"/></svg><span data-str="menu.rules"></span><span class="q-sub" data-str="menu.quick.rulesSub"></span></button>
               <button id="m-replays" class="quick-btn" type="button"><svg><use href="#i-replay"/></svg><span data-str="menu.replays"></span><span id="q-replays" class="q-sub"></span></button>
+            </div>
+            <div class="card ladder-card">
+              <div class="card-title" data-str="progress.ladderTitle"></div>
+              <p class="ladder-help" data-str="progress.ladderHelp"></p>
+              <div id="m-ladder" class="ladder"></div>
             </div>
             <p class="home-foot"><button id="m-export" class="btn link" type="button" data-str="menu.export"></button></p>
           </div>
