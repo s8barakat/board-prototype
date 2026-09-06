@@ -39,7 +39,7 @@
   },
   "animation": {
     "move": { "ms": 220 },
-    "kill": { "ms": 420 },
+    "kill": { "ms": 800 },
     "bonus": {
       "N": { "ms": 460, "style": "hop" },
       "R": { "ms": 380, "style": "slide" },
