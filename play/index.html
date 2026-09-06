@@ -13,8 +13,8 @@
     <link rel="icon" href="./icons/icon-192.png" type="image/png" />
     <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
     <title>Spoils</title>
-    <script type="module" crossorigin src="./assets/index-yaKVwS1E.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CzAPOolK.css">
+    <script type="module" crossorigin src="./assets/index-DvTKfchn.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-D4Gu5-VN.css">
   </head>
   <body>
     <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -164,6 +164,7 @@
               <div class="actions game-actions">
                 <button id="g-decline" class="btn sm" hidden title="D" data-str="action.decline"></button>
                 <button id="g-hint" class="btn sm" hidden data-str="action.hint"></button>
+                <button id="g-undo" class="btn sm ghost" type="button" hidden data-str="action.undo"></button>
                 <button id="g-moves" class="btn sm ghost mobile-only tab" type="button" aria-pressed="true" data-str="action.moves"></button>
                 <button id="g-marks" class="btn sm ghost mobile-only tab" type="button" aria-pressed="false" data-str="action.marks"></button>
                 <button id="g-resign" class="btn sm ghost" data-str="action.resign"></button>
@@ -193,6 +194,10 @@
               <div id="results-title" class="modal-title"></div>
               <p id="results-text"></p>
               <div id="results-xp" class="results-xp"></div>
+              <div id="results-suggest" class="results-suggest" hidden>
+                <span id="results-suggest-text"></span>
+                <button id="r-suggest" class="btn sm primary" type="button"></button>
+              </div>
               <div class="results-board"><canvas id="results-board" aria-label="final position"></canvas></div>
               <div class="modal-actions">
                 <button id="r-rematch" class="btn primary" data-str="action.rematch"></button>
