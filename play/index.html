@@ -13,8 +13,8 @@
     <link rel="icon" href="./icons/icon-192.png" type="image/png" />
     <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
     <title>Spoils</title>
-    <script type="module" crossorigin src="./assets/index-1WEiLHNR.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BeOr7zm1.css">
+    <script type="module" crossorigin src="./assets/index-nC6uwPTm.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-MSrQlh6J.css">
   </head>
   <body>
     <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -56,7 +56,7 @@
           <div class="home">
             <header class="home-head">
               <div class="home-brand"><span class="brand-mark">S</span><span class="brand-name">Spoils</span></div>
-              <div id="m-stats" class="home-chip"></div>
+              <div class="home-level"><div id="m-stats" class="home-chip"></div><div class="level-meter"><div id="m-level-bar" class="level-fill"></div></div></div>
             </header>
             <div class="hero-card">
               <div class="hero-eyebrow">Chess, plus one rule</div>
@@ -78,9 +78,9 @@
               <div class="menu-grid">
                 <label><span data-str="menu.opponent"></span>
                   <select id="m-opponent">
-                    <option value="medium">Computer — Medium</option>
-                    <option value="easy">Computer — Easy</option>
-                    <option value="hard">Computer — Hard</option>
+                    <option value="medium">Marlow — Medium</option>
+                    <option value="easy">Pip — Easy</option>
+                    <option value="hard">Vesper — Hard</option>
                     <option value="human">A friend (hot seat)</option>
                   </select>
                 </label>
@@ -111,6 +111,7 @@
         <section id="screen-game" class="screen" hidden>
           <div class="game-layout">
             <div class="board-col">
+              <div id="eval-bar" class="eval-bar" hidden aria-label="evaluation"><div id="eval-fill" class="eval-fill"></div></div>
               <div id="bar-top" class="player-bar"></div>
               <div class="board-wrap">
                 <div class="board-frame"><canvas id="board" aria-label="board" tabindex="0"></canvas></div>
@@ -134,6 +135,7 @@
                   </div>
                 </div>
                 <div id="desc" class="desc"></div>
+                <div id="review" class="review" hidden></div>
               </div>
               <div id="moves-card" class="card moves-card">
                 <div class="card-title row-between"><span data-str="moves.title"></span><span id="nav-pos" class="nav-pos"></span></div>
@@ -143,11 +145,13 @@
               <details id="legend-card" class="card legend-card">
                 <summary data-str="legend.title"></summary>
                 <ul class="legend">
-                  <li><span class="sw dot"></span> legal move</li>
-                  <li><span class="sw ring"></span> legal capture</li>
-                  <li><span class="sw diamond"></span> bonus destination, moving as the piece you took</li>
-                  <li><span class="sw dashed"></span> bonus capture (Mayhem)</li>
-                  <li><span class="sw hatch"></span> king warning (custom rulesets where a bonus may take the king)</li>
+                  <li><span class="sw dot"></span> Legal move</li>
+                  <li><span class="sw ring"></span> Legal capture</li>
+                  <li><span class="sw diamond"></span> Bonus move</li>
+                  <li><span class="sw dashed"></span> Bonus capture</li>
+                  <li><span class="sw sel"></span> Selected / last move</li>
+                  <li><span class="sw threat"></span> Bonus threat</li>
+                  <li id="legend-hatch"><span class="sw hatch"></span> King can be taken</li>
                 </ul>
               </details>
               </div>
@@ -188,9 +192,12 @@
               <div id="results-figure" class="results-figure"></div>
               <div id="results-title" class="modal-title"></div>
               <p id="results-text"></p>
+              <div id="results-xp" class="results-xp"></div>
+              <div class="results-board"><canvas id="results-board" aria-label="final position"></canvas></div>
               <div class="modal-actions">
                 <button id="r-rematch" class="btn primary" data-str="action.rematch"></button>
                 <button id="r-swap" class="btn" data-str="action.rematchSwap"></button>
+                <button id="r-review" class="btn" data-str="action.review"></button>
                 <button id="r-menu" class="btn ghost" data-str="action.menu"></button>
               </div>
             </div>
@@ -219,7 +226,7 @@
                 <div id="p-rating-note" class="stat-note"></div>
               </div>
               <div class="stat-tile">
-                <div class="stat-label" data-str="puzzle.streakLabel"></div>
+                <div class="stat-label" data-str="progress.streakLabel"></div>
                 <div id="p-streak" class="stat-value"></div>
                 <div id="p-streak-note" class="stat-note"></div>
               </div>
