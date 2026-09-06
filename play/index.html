@@ -13,8 +13,8 @@
     <link rel="icon" href="./icons/icon-192.png" type="image/png" />
     <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
     <title>Spoils</title>
-    <script type="module" crossorigin src="./assets/index-CbR0MhdF.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-WjKXlmps.css">
+    <script type="module" crossorigin src="./assets/index-186B0j_w.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DAd82kOz.css">
   </head>
   <body>
     <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -32,7 +32,6 @@
         <symbol id="i-first" viewBox="0 0 24 24"><path d="M6 5h2v14H6zm12 0v14l-9-7z" fill="currentColor"/></symbol>
         <symbol id="i-prev" viewBox="0 0 24 24"><path d="M16 5v14l-9-7z" fill="currentColor"/></symbol>
         <symbol id="i-next" viewBox="0 0 24 24"><path d="M8 5v14l9-7z" fill="currentColor"/></symbol>
-        <symbol id="i-close" viewBox="0 0 24 24"><path d="M6.4 5 12 10.6 17.6 5 19 6.4 13.4 12l5.6 5.6-1.4 1.4L12 13.4 6.4 19 5 17.6 10.6 12 5 6.4z" fill="currentColor"/></symbol>
         <symbol id="i-last" viewBox="0 0 24 24"><path d="M16 5h2v14h-2zM6 5v14l9-7z" fill="currentColor"/></symbol>
       </defs>
     </svg>
@@ -114,10 +113,7 @@
         <section id="screen-game" class="screen" hidden>
           <div class="game-layout">
             <div class="board-col">
-              <div class="top-row">
-                <div id="bar-top" class="player-bar"></div>
-                <button id="g-leave" class="btn icon leave mobile-only" type="button" title="Resign and leave" aria-label="Resign and leave"><svg><use href="#i-close"/></svg></button>
-              </div>
+              <div id="bar-top" class="player-bar"></div>
               <div class="board-wrap">
                 <div class="board-frame"><canvas id="board" aria-label="board" tabindex="0"></canvas></div>
               </div>
@@ -157,6 +153,7 @@
                 <button id="g-moves" class="btn sm ghost mobile-only" type="button" data-str="action.moves"></button>
                 <button id="g-marks" class="btn sm ghost mobile-only" type="button" data-str="action.marks"></button>
                 <button id="g-resign" class="btn sm ghost" data-str="action.resign"></button>
+                <button id="g-exit" class="btn sm ghost mobile-only" type="button" hidden data-str="action.exit"></button>
               </div>
               <div id="sheet-backdrop" class="sheet-backdrop" hidden></div>
               <details id="legend-card" class="card legend-card sheet">
