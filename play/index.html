@@ -13,8 +13,8 @@
     <link rel="icon" href="./icons/icon-192.png" type="image/png" />
     <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
     <title>Spoils</title>
-    <script type="module" crossorigin src="./assets/index-DvTKfchn.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-D4Gu5-VN.css">
+    <script type="module" crossorigin src="./assets/index-BHVrTIAa.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CkJEcmTV.css">
   </head>
   <body>
     <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -91,6 +91,10 @@
                     <option value="random">Random</option>
                   </select>
                 </label>
+              </div>
+              <div class="clock-row">
+                <span class="clock-label" data-str="menu.clock"></span>
+                <div id="m-clock" class="segmented" role="radiogroup" aria-label="Clock"></div>
               </div>
               <div class="hero-actions">
                 <button id="m-resume" class="btn xl" hidden data-str="menu.resume"></button>
@@ -219,6 +223,10 @@
               </div>
               <div id="p-pool" class="segmented" role="radiogroup" aria-label="Pool"></div>
             </header>
+            <div class="puzzle-filters">
+              <div id="p-kind" class="segmented" role="radiogroup" aria-label="Theme"></div>
+              <div id="p-level" class="segmented" role="radiogroup" aria-label="Difficulty"></div>
+            </div>
             <div class="stats">
               <div class="stat-tile">
                 <div class="stat-label" data-str="puzzle.solvedLabel"></div>
