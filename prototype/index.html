@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Board prototype</title>
+    <script type="module" crossorigin src="./assets/index-Je1gCCQc.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-NHT0o5jd.css">
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Board prototype <span class="tag">playtest build</span></h1>
+        <p class="rule">
+          Chess, plus one rule: <strong>when a piece captures, it immediately makes one more move using the movement pattern of the piece it just took.</strong>
+          A bishop that takes a rook makes one rook move. The capturing piece stays what it is.
+        </p>
+      </header>
+      <main>
+        <section class="board-col">
+          <div id="status" class="status"></div>
+          <div id="settings-notice" class="notice" hidden>
+            <span>Match setup has changed but the board is still running the old settings.</span>
+            <button id="btn-notice-apply" type="button" class="primary">Start a new game with the new settings</button>
+            <button id="btn-notice-revert" type="button">Revert to the running game's settings</button>
+          </div>
+          <div id="bonus-banner" class="banner" hidden></div>
+          <div id="bar-b" class="player-bar"></div>
+          <div id="board" class="board" aria-label="chess board"></div>
+          <div id="bar-w" class="player-bar"></div>
+          <div id="promo" class="promo" hidden></div>
+          <div class="nav">
+            <button id="nav-first" type="button" title="Start position (Home)">⏮</button>
+            <button id="nav-back" type="button" title="Back one step (←)">◀</button>
+            <button id="nav-fwd" type="button" title="Forward one step (→)">▶</button>
+            <button id="nav-live" type="button" title="Back to the game (End)">⏭</button>
+            <span id="nav-pos" class="nav-pos"></span>
+          </div>
+          <div id="frame-desc" class="frame-desc"></div>
+          <div class="actions">
+            <button id="btn-decline" hidden>Decline bonus</button>
+            <button id="btn-hint" title="Show the move the Hard bot would play (logged with the game)">Hint</button>
+            <button id="btn-resign">Resign</button>
+            <button id="btn-new">New game</button>
+          </div>
+          <div id="result" class="result" hidden></div>
+        </section>
+        <aside class="side-col">
+          <details open class="moves-panel">
+            <summary>Moves</summary>
+            <div id="moves" class="moves"></div>
+            <p class="hint">Click a move to see the position after it, then use ◀ ▶ to step through the capture and the bonus move separately.</p>
+          </details>
+          <details open>
+            <summary>Match setup</summary>
+            <label class="row">Preset <select id="preset"></select></label>
+            <div id="flags" class="flags"></div>
+            <div class="seats">
+              <label class="row">White <select id="seat-w"></select> <select id="exp-w"></select></label>
+              <label class="row">Black <select id="seat-b"></select> <select id="exp-b"></select></label>
+            </div>
+            <button id="btn-apply" class="primary">Start a new game with these settings</button>
+            <p class="hint">Settings apply to the next game. The current game keeps the rules it started with.</p>
+          </details>
+          <details>
+            <summary>Playtest data</summary>
+            <p id="stats" class="hint"></p>
+            <div class="actions">
+              <button id="btn-export">Export this game</button>
+              <button id="btn-export-all">Export all stored games</button>
+              <button id="btn-clear">Clear stored games</button>
+            </div>
+            <p class="hint">Every finished (or abandoned) game is stored in this browser. Please export all games and send the file back.</p>
+          </details>
+          <details>
+            <summary>Legend</summary>
+            <ul class="legend">
+              <li><span class="swatch dest"></span> legal move</li>
+              <li><span class="swatch dest-capture"></span> legal capture</li>
+              <li><span class="swatch bonus-dest"></span> bonus destination (borrowed pattern)</li>
+              <li><span class="swatch bonus-capture"></span> bonus capture (Mayhem only)</li>
+              <li><span class="swatch check"></span> king in check</li>
+              <li><span class="swatch warn-king"></span> king warning: a capture-and-reach combination can take the king here</li>
+              <li><span class="swatch warn-dest"></span> king move that would still be exposed</li>
+            </ul>
+            <p class="hint">Notation: <code>Bxe5&gt;Re8</code> = bishop takes on e5, then moves as a rook to e8. <code>&gt;-</code> = bonus declined. <code>#K</code> = king taken.</p>
+          </details>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>
