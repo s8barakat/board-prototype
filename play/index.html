@@ -13,8 +13,8 @@
     <link rel="icon" href="./icons/icon-192.png" type="image/png" />
     <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
     <title>Spoils</title>
-    <script type="module" crossorigin src="./assets/index-CUBL-ZXz.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-B7TiLjMm.css">
+    <script type="module" crossorigin src="./assets/index-47fqZWe6.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Cao5Fkh6.css">
   </head>
   <body>
     <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -55,13 +55,21 @@
         <section id="screen-menu" class="screen">
           <div class="home">
             <header class="home-head">
-              <div class="home-brand"><span class="brand-mark">S</span><span class="brand-name">Spoils</span></div>
+              <div class="home-brand">
+                <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></span>
+                <span class="brand-name">Spoils</span>
+              </div>
               <div class="home-level"><div class="home-chips"><div id="m-streak" class="home-chip streak" hidden></div><div id="m-stats" class="home-chip"></div></div><div class="level-meter"><div id="m-level-bar" class="level-fill"></div></div></div>
             </header>
             <div class="hero-card">
               <div class="hero-eyebrow">Chess, plus one rule</div>
               <h1>Capture a piece. <span class="accent">Borrow its move.</span></h1>
               <div class="board-frame preview" aria-hidden="true"><canvas id="preview-board"></canvas></div>
+              <ol class="beats" aria-label="How a capture works">
+                <li><span class="beat-mark step">1</span><span class="beat-body"><b data-str="beats.take"></b><span data-str="beats.takeSub"></span></span></li>
+                <li><span class="beat-mark diamond"></span><span class="beat-body"><b data-str="beats.borrow"></b><span data-str="beats.borrowSub"></span></span></li>
+                <li><span class="beat-mark dashed"></span><span class="beat-body"><b data-str="beats.strike"></b><span data-str="beats.strikeSub"></span></span></li>
+              </ol>
             </div>
             <p id="m-first" class="notice-first" hidden data-str="menu.firstLaunch"></p>
             <div class="card play-card">
@@ -75,25 +83,25 @@
                 </div>
                 <div id="flags" class="flags"></div>
               </div>
-              <div class="menu-grid">
-                <label><span data-str="menu.opponent"></span>
-                  <select id="m-opponent">
-                    <option value="medium">Marlow — Medium</option>
-                    <option value="easy">Pip — Easy</option>
-                    <option value="hard">Vesper — Hard</option>
-                    <option value="human">A friend (hot seat)</option>
-                  </select>
-                </label>
-                <label><span data-str="menu.colour"></span>
-                  <select id="m-colour">
-                    <option value="w">White</option>
-                    <option value="b">Black</option>
-                    <option value="random">Random</option>
-                  </select>
-                </label>
+              <div class="field">
+                <span class="field-label" data-str="menu.opponent"></span>
+                <div id="m-opponents" class="opponents" role="radiogroup" aria-label="Opponent"></div>
+                <select id="m-opponent" class="sr-only" aria-hidden="true" tabindex="-1">
+                  <option value="medium">Marlow — Medium</option>
+                  <option value="easy">Pip — Easy</option>
+                  <option value="hard">Vesper — Hard</option>
+                  <option value="human">A friend (hot seat)</option>
+                </select>
               </div>
-              <div class="clock-row">
-                <span class="clock-label" data-str="menu.clock"></span>
+              <div class="field-rows">
+                <span class="field-label" data-str="menu.colour"></span>
+                <div id="m-colours" class="segmented" role="radiogroup" aria-label="You play"></div>
+                <select id="m-colour" class="sr-only" aria-hidden="true" tabindex="-1">
+                  <option value="w">White</option>
+                  <option value="b">Black</option>
+                  <option value="random">Random</option>
+                </select>
+                <span class="field-label" data-str="menu.clock"></span>
                 <div id="m-clock" class="segmented" role="radiogroup" aria-label="Clock"></div>
               </div>
               <div class="hero-actions">
