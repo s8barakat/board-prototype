@@ -13,8 +13,8 @@
     <link rel="icon" href="./icons/icon-192.png" type="image/png" />
     <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
     <title>Spoils</title>
-    <script type="module" crossorigin src="./assets/index-Cx1TFus3.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Cao5Fkh6.css">
+    <script type="module" crossorigin src="./assets/index-Dxvotv0A.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CseXkz2U.css">
   </head>
   <body>
     <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -147,6 +147,7 @@
                 <div id="status" class="status"></div>
                 <div id="banner" class="banner" hidden></div>
                 <div id="task" class="task" hidden>
+                  <div class="task-head"><span id="task-steps" class="task-steps" aria-hidden="true"></span><span id="task-step" class="task-step"></span></div>
                   <div id="task-title" class="task-title"></div>
                   <div id="task-text"></div>
                   <div id="task-feedback" class="task-feedback"></div>
@@ -251,7 +252,7 @@
             <div class="stats">
               <div class="stat-tile">
                 <div class="stat-label" data-str="puzzle.solvedLabel"></div>
-                <div id="p-solved" class="stat-value"></div>
+                <div class="stat-value"><span id="p-solved"></span><small id="p-solved-total"></small></div>
                 <div class="progress"><div id="p-bar" class="progress-fill"></div></div>
               </div>
               <div class="stat-tile">
@@ -261,7 +262,7 @@
               </div>
               <div class="stat-tile">
                 <div class="stat-label" data-str="progress.streakLabel"></div>
-                <div id="p-streak" class="stat-value"></div>
+                <div class="stat-value"><span id="p-streak"></span><i class="stat-diamond"></i></div>
                 <div id="p-streak-note" class="stat-note"></div>
               </div>
             </div>
