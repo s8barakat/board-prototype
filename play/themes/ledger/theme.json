@@ -80,7 +80,7 @@
   },
   "animation": {
     "move": {
-      "ms": 220
+      "ms": 260
     },
     "kill": {
       "ms": 800
