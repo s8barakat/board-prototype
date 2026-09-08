@@ -8,11 +8,11 @@
 //      platform does its own caching.
 // CACHE and PRECACHE are stamped at build time by scripts/build-sw.ts; the values here are the fallback
 // for a dev server, where precaching is neither wanted nor needed.
-const CACHE = 'spoils-web-f188ff073693';
+const CACHE = 'spoils-web-9597d3d3fb69';
 const PRECACHE = [
   "./assets/bot-worker-CHicyp-c.js",
-  "./assets/index-BXLBLS4C.css",
-  "./assets/index-CYLx1GXl.js",
+  "./assets/index-DG84VzC6.js",
+  "./assets/index-DT_Ky3-r.css",
   "./icons/apple-touch-icon.png",
   "./icons/icon-192.png",
   "./icons/icon-512.png",

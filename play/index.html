@@ -13,8 +13,8 @@
     <link rel="icon" href="./icons/icon-192.png" type="image/png" />
     <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
     <title>Spoils</title>
-    <script type="module" crossorigin src="./assets/index-CYLx1GXl.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BXLBLS4C.css">
+    <script type="module" crossorigin src="./assets/index-DG84VzC6.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DT_Ky3-r.css">
   </head>
   <body>
     <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -245,10 +245,6 @@
               </div>
               <div id="p-pool" class="segmented" role="radiogroup" aria-label="Pool"></div>
             </header>
-            <div class="puzzle-filters">
-              <div id="p-kind" class="segmented" role="radiogroup" aria-label="Theme"></div>
-              <div id="p-level" class="segmented" role="radiogroup" aria-label="Difficulty"></div>
-            </div>
             <div class="stats">
               <div class="stat-tile">
                 <div class="stat-label" data-str="puzzle.solvedLabel"></div>
@@ -265,6 +261,10 @@
                 <div class="stat-value"><span id="p-streak"></span><i class="stat-diamond"></i></div>
                 <div id="p-streak-note" class="stat-note"></div>
               </div>
+            </div>
+            <div class="puzzle-filters">
+              <div class="filter-row"><span class="filter-label" data-str="puzzle.themeLabel"></span><div id="p-kind" class="segmented" role="radiogroup" aria-label="Theme"></div></div>
+              <div class="filter-row"><span class="filter-label" data-str="puzzle.levelLabel"></span><div id="p-level" class="segmented" role="radiogroup" aria-label="Difficulty"></div></div>
             </div>
             <div class="puzzle-cards">
               <button id="p-continue" class="feature-card" type="button">
@@ -374,12 +374,15 @@
                   <div class="setting-label"><span data-str="settings.board"></span><span class="setting-help" data-str="settings.boardHelp"></span></div>
                   <div id="s-board" class="swatches" role="radiogroup" aria-label="Board colours"></div>
                 </div>
-                <div class="setting">
-                  <div class="setting-label"><span data-str="settings.theme"></span><span class="setting-help" data-str="settings.themeHelp"></span></div>
-                  <select id="s-theme">
-                    <option value="ledger">Ledger (original set)</option>
-                    <option value="greybox">Greybox (placeholder glyphs)</option>
-                  </select>
+                <div class="setting inline">
+                  <div class="setting-head">
+                    <div class="setting-label"><span data-str="settings.theme"></span></div>
+                    <select id="s-theme">
+                      <option value="ledger">Ledger</option>
+                      <option value="greybox">Greybox</option>
+                    </select>
+                  </div>
+                  <span class="setting-help" data-str="settings.themeHelp"></span>
                 </div>
                 <div class="setting">
                   <div class="setting-label"><span data-str="settings.uiScale"></span><span class="setting-help" data-str="settings.uiScaleHelp"></span></div>
@@ -393,11 +396,13 @@
                   <div id="s-anim" class="segmented" role="radiogroup" aria-label="Animation"></div>
                 </div>
                 <div class="setting">
-                  <div class="setting-label"><span data-str="settings.sound"></span><span class="setting-help" data-str="settings.soundHelp"></span></div>
+                  <div class="setting-head">
+                    <div class="setting-label"><span data-str="settings.sound"></span><span class="setting-help" data-str="settings.soundHelp"></span></div>
+                    <span id="s-volume-value" class="volume-value"></span>
+                  </div>
                   <div class="volume-row">
                     <svg class="volume-icon"><use href="#i-sound"/></svg>
                     <input id="s-volume" type="range" min="0" max="100" step="5" aria-label="Sound volume" />
-                    <span id="s-volume-value" class="volume-value"></span>
                     <button id="s-test" class="btn sm" type="button" data-str="settings.testSound"></button>
                   </div>
                 </div>
